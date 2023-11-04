@@ -1,0 +1,81 @@
+imie = input("Wpisz swoje imie: ")
+
+for i in range (0,100):
+    if imie.isalpha():
+        i = 0
+        break
+    else:
+        print("Niepoprawne!")
+        imie = input("Wpisz swoje imie: ")
+        i = +1
+
+nazwisko = input("Wpisz swoje nazwisko: ")
+
+for i in range (0,100):
+    if nazwisko.isalpha():
+        i = 0
+        break
+    else:
+        print("Niepoprawne!")
+        nazwisko = input("Wpisz swoje nazwisko: ")
+        i = +1
+
+wiek = input("Podaj swój wiek: ")
+
+for i in range (0,100):
+    if wiek.isdigit():
+        i = 0
+        break
+    else:
+        print("Niepoprawny!")
+        wiek = input("Wpisz swoj wiek: ")
+        i = +1
+
+haslo = input ("Wprowadź hasło: ")
+pow_haslo = input ("Powtóż hasło: ")
+
+
+while haslo != pow_haslo:
+  print("Hasła się różnią")
+  haslo = input ("Wprowadź hasło: ")
+  pow_haslo = input ("Powtóż hasło: ")
+
+tel = input ("Wprowadź numer telefonu: ")
+tel = ''.join(filter(str.isdigit, tel))
+
+while len(tel) != 9:
+  print("Błędny numer telefonu. Wprowadź ponownie")
+  tel = input ("Wprowadź numer telefonu: ")
+  tel = ''.join(filter(str.isdigit, tel))
+
+if len(tel) == 9:
+  print("Imie i nazwisko: ",imie," ",nazwisko)
+  print("Wiek: ", wiek)
+  print("Hasło: ", haslo)
+  print("Tel: ", tel)
+
+
+# Zad 2
+
+x = int(input("Podaj pierwszą liczbę: "))
+y = int(input("Podaj drugą liczbę:"))
+
+z = input("+,-,/,*,%,^?")
+
+if z == "+6":
+    print(x + y)
+
+if z == "-":
+    print(x - y)
+
+if z == "/":
+    print(x / y)
+
+if z == "*":
+    print(x * y)
+
+if z == "%":
+    print(x % y)
+
+if z == "^":
+    print(x ** y)
